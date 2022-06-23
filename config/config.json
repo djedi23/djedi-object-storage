@@ -1,0 +1,39 @@
+{
+  "application": {
+    "name": "@djedi/object-storage",
+    "releasenumber": "768fd2f",
+    "gittag": "",
+    "gitbranch": "master"
+  },
+  "storage": {
+    "minio": {
+      "endPoint": "localhost",
+      "port": 9000,
+      "useSSL": false,
+      "accessKey": "minio",
+      "secretKey": "minio123"
+    },
+    "mongodb": {
+      "url": "mongodb://localhost",
+      "database": "test"
+    }
+  },
+  "log": {
+    "level": "silly",
+    "dir": "/var/log/@djedi/object-storage",
+    "sentry": {
+      "disabled": true,
+      "dsn": ""
+    },
+    "logstash": {
+      "level": "info",
+      "disabled": true,
+      "host": "",
+      "auth": {
+        "username": "",
+        "password": ""
+      },
+      "ssl": true
+    }
+  }
+}

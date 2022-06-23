@@ -1,0 +1,41 @@
+{
+  "name": "@djedi/object-storage",
+  "version": "0.1.5",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "prettier": "prettier --write src/**/*.ts",
+    "prettierjson": "prettier --write --parser json  ./config/config.json",
+    "lint": "tslint --project .",
+    "start": "node build/index.js",
+    "test": "tsc && ava",
+    "prepare": "yarn build",
+    "build": "tsc -d --declarationMap --sourceMap",
+    "dev": "yarn nodemon --ignore sessions/ build/index.js"
+  },
+  "devDependencies": {
+    "@djedi/configuration": "git+https://github.com/djedi23/djedi-configuration.git",
+    "@djedi/log": "git+https://github.com/djedi23/djedi-log.git#0.4.10",
+    "@manuth/tslint-presets": "^1.0.4",
+    "@types/minio": "^7.0.5",
+    "@types/mongodb": "^3.5.16",
+    "@types/node": "^13.13.5",
+    "ava": "^3.8.1",
+    "minio": "^7.0.28",
+    "mongodb": "^3.5.7",
+    "mongodb-memory-server": "^6.5.2",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3",
+    "typescript-tslint-plugin": "^0.5.5"
+  },
+  "peerDependencies": {
+    "@djedi/configuration": "git+https://github.com/djedi23/djedi-configuration.git",
+    "@djedi/log": "git+https://github.com/djedi23/djedi-log.git#0.4.10",
+    "minio": "^7.0.16",
+    "mongodb": "^3.5.7"
+  },
+  "dependencies": {}
+}
